@@ -261,6 +261,7 @@ footer {
     height: 4px;
   }
 
+  /* اضافة تأثير السكرول للنافيقيشن بار*/
   .nav-links::-webkit-scrollbar-thumb {
     background: var(--accent-color);
     border-radius: 10px;
@@ -272,6 +273,18 @@ footer {
   margin-right: 30px;
 }
 
+/*يخفي مؤشر السكرول*/
 .nav-links::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
+}
+
+footer i,
+a {
+  padding: 3px;
+  color: inherit; /* يأخذ نفس لون النص */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #00bcd4; /* لون عند المرور (اختياري) */
 }
