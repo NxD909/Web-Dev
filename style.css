@@ -249,18 +249,29 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    padding: 10px 15px;
-  }
-
   .nav-links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    gap: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
   }
 
-  .logo {
-    white-space: nowrap;
+  .nav-links::-webkit-scrollbar {
+    height: 4px;
   }
+
+  .nav-links::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+  }
+}
+
+.logo {
+  white-space: nowrap;
+  margin-right: 30px;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
