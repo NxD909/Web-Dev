@@ -115,6 +115,10 @@ body {
   background-color: var(--base-variant);
 }
 
+#about a {
+  color: #00bcd4;
+}
+
 /* ---------- HERO SECTION ---------- */
 .hero {
   min-height: 100vh;
@@ -184,6 +188,7 @@ p {
 
 .card a {
   text-decoration: none;
+  color: #00bcd4;
 }
 
 .card:hover {
@@ -278,13 +283,12 @@ footer {
   display: none;
 }
 
-footer i,
-a {
+footer a {
   padding: 3px;
   color: inherit; /* يأخذ نفس لون النص */
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #00bcd4; /* لون عند المرور (اختياري) */
+  color: #00bcd4;
 }
