@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" href="/images/code.png" />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <title>Ayman Omer | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script type="text/JavaScript" src="script.js" defer></script>
+  </head>
+  <body class="darkmode">
+    <!-- ---------- NAVBAR ---------- -->
+    <nav class="navbar">
+      <div class="logo"><a href="protfolio.html">Ayman Omer</a></div>
+      <ul class="nav-links">
+        <li>
+          <a href="#about"> About <i class="fa-solid fa-info"></i> </a>
+        </li>
+
+        <li>
+          <a href="#certificates">
+            Certificates <i class="fa-solid fa-certificate"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#skills"> Skills <i class="fa-solid fa-dumbbell"></i> </a>
+        </li>
+
+        <li>
+          <a href="#projects">
+            Projects <i class="fa-solid fa-diagram-project"></i
+          ></a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            Contact Us <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button id="theme-switch">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#e3e3e3"
+      >
+        <path
+          d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#e3e3e3"
+      >
+        <path
+          d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"
+        />
+      </svg>
+    </button>
+
+    <!-- ---------- HERO ---------- -->
+    <section class="hero">
+      <img src="images/pfp.avif" alt="Profile Picture" class="profile-img" />
+      <h1>Ayman Omer</h1>
+      <p>Web Developer | Student | 2026 Trainee</p>
+    </section>
+
+    <!-- ---------- ABOUT ---------- -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        Hello! Welcome to my website! <br />
+        My name is Ayman Omer, am a Computer Sience student at
+        <a href="https://bu.edu.sa/"> Al Baha University</a> <br />
+        I like working with programming languges and learn about different tools
+        that help me build my carrer goals and passions to be real <br />
+        I have learned HTML, CSS and on my way to js and a lot more to be a full
+        web Developer!
+      </p>
+    </section>
+
+    <!-- ---------- CERTIFICATES ---------- -->
+    <section id="certificates" class="section">
+      <h2>Certificates</h2>
+      <div class="projects">
+        <div class="card">
+          HTML Essentials<br />
+          <a href="https://www.netacad.com/">Cisco Networking Academy</a>
+        </div>
+        <div class="card">
+          Data Fundamentals<br /><a href="https://skillsbuild.org/"
+            >IBMSkillsBuild</a
+          >
+        </div>
+        <div class="card">Certificate 3</div>
+      </div>
+    </section>
+
+    <!-- ---------- SKILLS ---------- -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="card">HTML <i class="fa-brands fa-html5"></i></i></div>
+        <div class="card">CSS <i class="fa-brands fa-css3-alt"></i></div>
+        <div class="card">JavaScript <i class="fa-brands fa-js"></i></div>
+        <div class="card">Php <i class="fa-brands fa-php"></i></div>
+        <div class="card">SQL <i class="fa-solid fa-database"></i></div>
+        <div class="card">Team work</div>
+        <div class="card">Emotional Intelligence</div>
+      </div>
+    </section>
+
+    <!-- ---------- PROJECTS ---------- -->
+    <section id="projects" class="section">
+      <h2>My Projects</h2>
+      <div class="projects">
+        <div class="card">
+          Online Coffee Shop <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <div class="card">Project 2</div>
+        <div class="card">Project 3</div>
+      </div>
+    </section>
+
+    <!-- ---------- CONTACT ---------- -->
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Enter your Name" required />
+        <input type="email" placeholder=" Email" required />
+        <textarea rows="5" placeholder=" Message" required></textarea>
+        <button class="button" type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- ---------- FOOTER ---------- -->
+    <footer>
+      <section style="padding: 10px 20px 20px 20px">© 2026 Ayman Omer</section>
+      <ul>
+        <a href="https://github.com/NxD909" target="_blank" class="social-icon"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/AymanOmer2005/"
+          target="_blank"
+          class="social-icon"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/aymanomerel-amin/"
+          target="_blank"
+          class="social-icon"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+:root {
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #3a435d;
+  --accent-color: rgb(228, 54, 228);
+  --bars-color: rgb(224, 218, 218);
+}
+.darkmode {
+  --base-color: #070b1d;
+  --base-variant: #101425;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #3a435d;
+  --accent-color: purple;
+  --bars-color: #070b1d;
+}
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  cursor: pointer;
+}
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+#theme-switch svg:last-child {
+  display: none;
+}
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth; /* طبعا طبقتها هنا لاني لاحظت انها ما تشتغل لو سويتها على الناف بار*/
+  /* 😁 لانه الصفحة هي اللي تسوي سكرول مش الناف بار */
+}
+
+/* ---------- BODY ---------- */
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+  padding-top: 70px;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(60deg, var(--bars-color), var(--accent-color));
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* المسافة بين الأيقونة والنص */
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.logo {
+  border-color: var(--primary-color);
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.3s; /* لاحظت انه الترانزشن من الافضل انه يطبق على العنصر الاساسي */
+}
+
+.nav-links a:hover {
+  color: var(
+    --primary-color
+  ); /*  <a> لانه لو طبقناه هنا ما بيشتغل زي لما يكون في العنصر  */
+}
+
+#about {
+  background-color: var(--base-variant);
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  opacity: 0.8; /*color: rgba(255,255,255,0.8);*/
+
+  margin-top: 10px;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.section p a {
+  text-decoration: none;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background: var(--base-variant);
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: var(--base-variant);
+  border: 2px solid rgb(169, 1, 169);
+}
+
+/* ---------- CONTACT FORM ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: rgb(255, 0, 255);
+  outline: none;
+}
+
+.button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(60deg, var(--accent-color), var(--bars-color));
+}
+
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  border-radius: 50%;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
