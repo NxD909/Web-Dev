@@ -247,6 +247,7 @@ footer {
   background-color: #333;
   transform: scale(1.1);
 }
+
 @media (max-width: 768px) {
   .navbar {
     padding: 10px 15px;
@@ -263,4 +264,3 @@ footer {
     white-space: nowrap;
   }
 }
-
