@@ -1,0 +1,481 @@
+:root {
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #3a435d;
+  --accent-color: rgb(228, 54, 228);
+  --bars-color: rgb(224, 218, 218);
+  --hover-nav-a-light: #813181;
+  /* darker violet, readable on white & accent */
+}
+
+/* ---------- LANGUAGE SWITCH BUTTON ---------- */
+#lang {
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 70px;
+  /* Matches the theme-switch top position exactly */
+  right: 80px;
+  /* Sits just to the left of the theme switch */
+  cursor: pointer;
+}
+
+/* Style the FontAwesome icon inside the button */
+#lang i {
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+.darkmode {
+  --base-color: #070b1d;
+  --base-variant: #101425;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #3a435d;
+  --accent-color: rgb(228, 54, 228);
+  --bars-color: #070b1d;
+  --hover-nav-a-dark: #ff52ff;
+  /* bright purple/pink, readable on dark */
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  /* طبعا طبقتها هنا لاني لاحظت انها ما تشتغل لو سويتها على الناف بار*/
+  /* 😁 لانه الصفحة هي اللي تسوي سكرول مش الناف بار */
+}
+
+/* ---------- BODY ---------- */
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+  padding-top: 70px;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(60deg, var(--bars-color), var(--accent-color));
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* المسافة بين الأيقونة والنص */
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.logo {
+  border-color: var(--primary-color);
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.3s;
+  /* لاحظت انه الترانزشن من الافضل انه يطبق على العنصر الاساسي */
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+  /*  <a> لانه لو طبقناه هنا ما بيشتغل زي لما يكون في العنصر  */
+}
+
+#about {
+  background-color: var(--base-variant);
+}
+
+#about a {
+  color: #00bcd4;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  opacity: 0.8;
+  /*color: rgba(255,255,255,0.8);*/
+
+  margin-top: 10px;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.section p a {
+  text-decoration: none;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.certificates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  display: block;
+  background: var(--base-variant);
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.certificates .card a {
+  text-decoration: none;
+  color: #00bcd4;
+}
+
+
+
+.card:hover {
+  transform: translateY(-5px);
+  background: var(--base-variant);
+  border: 2px solid rgb(169, 1, 169);
+}
+
+
+
+/* ---------- CONTACT FORM ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: rgb(255, 0, 255);
+  outline: none;
+}
+
+.button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+.add-pro-btn {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-start;
+  direction: ltr;
+  font-size: larger;
+}
+
+.pro-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pro-btn:hover {
+
+  background-color: burlywood;
+  transform: scale(1.1);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(60deg, var(--accent-color), var(--bars-color));
+}
+
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  border-radius: 50%;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  /* اضافة تأثير السكرول للنافيقيشن بار*/
+  .nav-links::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+  }
+}
+
+.logo {
+  white-space: nowrap;
+  margin-right: 30px;
+}
+
+/*يخفي مؤشر السكرول*/
+.nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+footer a {
+  padding: 3px;
+  color: inherit;
+  /* يأخذ نفس لون النص */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #00bcd4;
+}
+
+.alert {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  border-left: 5px solid;
+  animation: slideIn 0.3s ease-in;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-left-color: #28a745;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left-color: #dc3545;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* File Upload Styling */
+input[type="file"] {
+  display: none;
+}
+
+.file-upload-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.file-upload-label {
+  display: block;
+  padding: 12px 20px;
+  background-color: var(--text-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 2px dashed #8B4513;
+}
+
+.file-upload-label:hover {
+  background-color: var(--hover-nav-a-light);
+  border-color: #6b3410;
+}
+
+.file-name {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.save {
+  margin-bottom: 15px;
+}
+
+.back {
+  text-align: center;
+  text-decoration: none;
+}
+
+.admin-rev {
+  text-align: center;
+  text-decoration: none;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+.admin-button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.admin-button:hover {
+  background-color: #e6ddf5;
+  transform: scale(1.05);
+}
